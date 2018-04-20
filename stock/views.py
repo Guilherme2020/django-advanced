@@ -7,13 +7,13 @@ from .forms import StockEntryForm
 def entries_list(request):
     results = StockEntry.objects.all()
 
-    return render(request, 'stock/entries/list.html', {
+    return render(request, 'entries/list.html', {
         'entries': results
     })
 
 
 def entries_new(request):
-    return render(request, 'stock/entries/create.html', {
+    return render(request, 'entries/create.html', {
         'form': StockEntryForm()
     })
 
