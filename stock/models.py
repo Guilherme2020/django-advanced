@@ -21,18 +21,18 @@ class Product(TimestampableMixin):
     def __str__(self):
         return self.name
 
-
+    '''
     @classmethod
     def increment_stock(self,sender,instance,**kwargs):
         product = instance.product
         product.stock = product.stock + instance.amount
         product.save()
-
+    '''
 class StockEntry(TimestampableMixin):
 
     amount = models.IntegerField()
     product = models.ForeignKey(Product,on_delete=models.CASCADE)
 
-post_save.connect(Product.increment_stock,sender=StockEntry)
+#post_save.connect(Product.increment_stock,sender=StockEntry)
 
 
