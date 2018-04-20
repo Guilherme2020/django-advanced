@@ -31,7 +31,7 @@ class Product(TimestampableMixin):
 class StockEntry(TimestampableMixin):
 
     amount = models.IntegerField()
-    product = models.ForeignKey(Product)
+    product = models.ForeignKey(Product,on_delete=models.CASCADE)
 
 post_save.connect(Product.increment_stock,sender=StockEntry)
 
