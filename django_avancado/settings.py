@@ -119,3 +119,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+FIXTURES_DIRS = [
+    os.path.join(BASE_DIR, "fixtures")
+]
+
+
+EMAIL_HOST = 'smtp.mailtrap.io'
+EMAIL_HOST_USER = 'a9ca78c50086d5'
+EMAIL_HOST_PASSWORD = '770badc67d3cbf'
+EMAIL_PORT = '2525'
+
+MAIL_REPLY = 'grodrigues.simeao@gmail.com'
