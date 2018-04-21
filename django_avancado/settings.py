@@ -130,4 +130,4 @@ EMAIL_HOST_USER = 'a9ca78c50086d5'
 EMAIL_HOST_PASSWORD = '770badc67d3cbf'
 EMAIL_PORT = '2525'
 
-MAIL_REPLY = 'grodrigues.simeao@gmail.com'
+MAIL_REPLY = 'admin@user.com'
